@@ -1,0 +1,32 @@
+{
+  "name": "generator-mustache-prototyping",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "caciuto/generator-mustache-prototyping",
+  "author": {
+    "name": "Alberto Brino",
+    "email": "alberto.brino@gmail.com",
+    "url": "https://github.com/caciuto"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.19.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mkdirp": "^0.5.1",
+    "mocha": "*",
+    "underscore.string": "^3.2.2"
+  }
+}

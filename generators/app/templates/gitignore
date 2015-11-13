@@ -1,0 +1,13 @@
+.DS_STORE
+.DS_Store
+._.DS_Store
+
+node_modules
+bower_components
+dist
+
+.tmp
+.sass-cache
+.idea
+
+npm-debug.log
