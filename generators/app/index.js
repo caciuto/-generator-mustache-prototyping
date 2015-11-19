@@ -3,6 +3,7 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 var mkdirp = require('mkdirp');
+var _ = require('lodash');
 var _s = require('underscore.string');
 
 module.exports = yeoman.generators.Base.extend({
@@ -79,7 +80,7 @@ module.exports = yeoman.generators.Base.extend({
 
     gruntfile: function () {
       this.fs.copyTpl(
-        this.templatePath('_Gruntfile.js'),
+        this.templatePath('Gruntfile.js'),
         this.destinationPath('Gruntfile.js'),
         {
           pkg: this.pkg,
@@ -87,6 +88,7 @@ module.exports = yeoman.generators.Base.extend({
           includeModernizr: this.includeModernizr
         }
       );
+
     },
 
     bower: function () {
@@ -122,6 +124,12 @@ module.exports = yeoman.generators.Base.extend({
       );
     },
 
+    mustacheData: function () {
+      this.fs.copyTpl(
+        this.templatePath('common-data.json'),
+        this.destinationPath('app/common-data.json')  
+      );
+    }, 
 
 
     html: function () {
@@ -190,6 +198,6 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function () {
-    // this.installDependencies();
+    this.installDependencies();
   }
 });
